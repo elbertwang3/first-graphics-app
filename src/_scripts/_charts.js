@@ -1,6 +1,5 @@
 import * as d3 from "d3";
 import annualTotals from "../_data/annual_totals";
-console.log(annualTotals);
 
 function createBarChart(el, fieldname) {
   const margin = { top: 20, right: 20, bottom: 20, left: 40 };
@@ -18,7 +17,6 @@ function createBarChart(el, fieldname) {
   const chartHeight = containerHeight - margin.top - margin.bottom;
 
   const xDomain = annualTotals.map(d => d.year);
-  console.log(xDomain);
 
   const yDomain = [0, d3.max(annualTotals.map(d => d[fieldname]))];
 
